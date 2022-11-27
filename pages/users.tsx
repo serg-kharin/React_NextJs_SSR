@@ -3,8 +3,9 @@ import MenuLink from "../components/MenuLink";
 import RootContainer from "../components/RootContainer";
 import {IUsersPageProps} from "../interfaces/IUsersPageProps";
 import {IUser} from "../interfaces/IUser";
+import {NextPage} from "next";
 
-const Users = ({users}:IUsersPageProps) => {
+const Users: NextPage = ({users}:IUsersPageProps) => {
     return (
         <RootContainer keywords={'users'} title={'Users'}>
 

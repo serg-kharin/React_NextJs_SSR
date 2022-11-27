@@ -2,10 +2,11 @@ import React, {ReactElement} from "react";
 import RootContainer from "../../components/RootContainer";
 import {IUserPageProps} from "../../interfaces/IUserPageProps";
 import {IUser} from "../../interfaces/IUser";
+import {NextPage} from "next";
 
 
 
-const User = ({user}: IUserPageProps): ReactElement => {
+const User: NextPage = ({user}: IUserPageProps): ReactElement => {
 
     function returnList(obj: any): ReactElement {
         return (
