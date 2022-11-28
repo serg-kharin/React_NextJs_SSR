@@ -1,5 +1,5 @@
 import {IUser} from "./IUser";
 
-export interface IUsersPageProps {
+export interface IUsersManagementPageProps {
     users: IUser[]
 }

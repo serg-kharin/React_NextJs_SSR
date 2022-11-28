@@ -1,11 +1,11 @@
 import React from "react";
 import MenuLink from "../components/MenuLink";
 import RootContainer from "../components/RootContainer";
-import {IUsersPageProps} from "../interfaces/IUsersPageProps";
+import {IUsersManagementPageProps} from "../interfaces/IUsersManagementPageProps";
 import {IUser} from "../interfaces/IUser";
 import {NextPage} from "next";
 
-const Users: NextPage = ({users}:IUsersPageProps) => {
+const Users: NextPage = ({users}:IUsersManagementPageProps) => {
     return (
         <RootContainer keywords={'users'} title={'Users'}>
 
