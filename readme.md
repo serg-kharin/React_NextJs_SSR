@@ -6,6 +6,6 @@ npm run dev - start the application
  - React.js
  - Next.js
  - Tailwind CSS
- - SSR through
+ - SSR Hybrid through
     - getStaticProps - https://nextjs.org/docs/basic-features/data-fetching/get-static-props
     - getServerSideProps - https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props
