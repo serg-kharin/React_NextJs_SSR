@@ -1,11 +1,11 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import MenuLink from "../components/MenuLink";
 import RootContainer from "../components/RootContainer";
 import {IUsersManagementPageProps} from "../interfaces/IUsersManagementPageProps";
 import {IUser} from "../interfaces/IUser";
-import {NextPage} from "next";
+import {GetStaticProps, NextPage} from "next";
 
-const Users: NextPage = ({users}:IUsersManagementPageProps) => {
+const Users: NextPage<IUsersManagementPageProps> = ({users}):ReactElement => {
     return (
         <RootContainer keywords={'users'} title={'Users'}>
 
@@ -24,7 +24,7 @@ const Users: NextPage = ({users}:IUsersManagementPageProps) => {
 
 export default Users;
 
-export async function getStaticProps() {
+export const getStaticProps:GetStaticProps<IUsersManagementPageProps> = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const users: IUser[] = await response.json();
 
