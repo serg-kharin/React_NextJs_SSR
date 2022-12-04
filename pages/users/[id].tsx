@@ -3,6 +3,7 @@ import RootContainer from "../../components/RootContainer";
 import {IUserPageProps} from "../../interfaces/IUserPageProps";
 import {IUser} from "../../interfaces/IUser";
 import {GetServerSideProps, GetServerSidePropsContext, NextPage} from "next";
+import {IUserGetServerSidePropsContext} from "../../interfaces/IUserGetServerSidePropsContext";
 
 
 
@@ -41,7 +42,7 @@ const User: NextPage = ({user}: IUserPageProps): ReactElement => {
 
 export default User;
 
-export const getServerSideProps:GetServerSideProps<IUserPageProps> = async ({params}:GetServerSidePropsContext) => {
+export const getServerSideProps:GetServerSideProps<IUserPageProps> = async ({params}:IUserGetServerSidePropsContext) => {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
     const user: IUser = await response.json() as IUser;
 
