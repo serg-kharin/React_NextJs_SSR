@@ -2,7 +2,7 @@ import React, {ReactElement} from "react";
 import RootContainer from "../../components/RootContainer";
 import {IUserPageProps} from "../../interfaces/IUserPageProps";
 import {IUser} from "../../interfaces/IUser";
-import {GetServerSideProps, NextPage} from "next";
+import {GetServerSideProps, NextPage } from "next";
 import {IUserGetServerSidePropsContext} from "../../interfaces/IUserGetServerSidePropsContext";
 
 
