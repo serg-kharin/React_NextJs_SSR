@@ -43,7 +43,7 @@ const User: NextPage = ({user}: IUserPageProps): ReactElement => {
 export default User;
 
 export const getServerSideProps:GetServerSideProps<IUserPageProps> = async ({params}:IUserGetServerSidePropsContext) => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+    const response = await fetch(`${process.env.API_URL}/users/${params.id}`);
     const user: IUser = await response.json() as IUser;
 
     return {

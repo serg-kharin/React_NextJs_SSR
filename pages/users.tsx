@@ -25,7 +25,7 @@ const Users: NextPage<IUsersManagementPageProps> = ({users}):ReactElement => {
 export default Users;
 
 export const getStaticProps:GetStaticProps<IUsersManagementPageProps> = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const response = await fetch(`${process.env.API_URL}/users`);
     const users: IUser[] = await response.json();
 
     return {
